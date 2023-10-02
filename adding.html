@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assest/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.7.31/sweetalert2.min.css"
+      integrity="sha512-IScV5kvJo+TIPbxENerxZcEpu9VrLUGh1qYWv6Z9aylhxWE4k4Fch3CHl0IYYmN+jrnWQBPlpoTVoWfSMakoKA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="assest/css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand text-capitalize" href="index.html"
+          >online-store-dashbord</a
+        >
+        <form class="d-flex">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-light" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+    <header>
+      <div class="container">
+        <h1 class="text-capitalize my-5 py-2">dashbord</h1>
+        <hr />
+      </div>
+    </header>
+    <div class="title">
+      <div class="container">
+        <div class="h2">Add Product</div>
+      </div>
+    </div>
+    <div class="add-form">
+      <div class="container">
+        <form class="w-75">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label"
+              >Product Name</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputName"
+              aria-describedby="emailHelp"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label"
+              >Description</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="InputDescription"
+              aria-describedby="emailHelp"
+            />
+          </div>
+
+          <div class="mb-3">
+            <input
+              type="file"
+              class="form-control"
+              multiple="multiple"
+              id="image"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Price</label>
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputPrice"
+              aria-describedby="emailHelp"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Rating</label>
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputRating"
+              aria-describedby="emailHelp"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">stock</label>
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputStock"
+              aria-describedby="emailHelp"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">category</label>
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputCategory"
+              aria-describedby="emailHelp"
+            />
+          </div>
+          <div class="text-center mt-5">
+            <button type="submit" class="btn btn-primary" id="add_btn">
+              Add
+            </button>
+            <button type="submit" class="btn btn-danger">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.7.31/sweetalert2.all.min.js"
+      integrity="sha512-5QpdBHWvX/WsWTTfdY5ub+5g8cUwJPbjMtZuOf5TtIDAzWrFAmfYrPaOE3Fekbbsc7UgTmS4znUAuq5FYwAW3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="assest/js/adding.js"></script>
+  </body>
+</html>
