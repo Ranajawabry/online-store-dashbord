@@ -46,9 +46,9 @@ data.forEach((element,index) => {
    <td class="fw-bold pt-4">${element.title}</td>
    <td class="fw-bold pt-4"><img src=${element.images[0]} width="100px" height="100px" /></td>
    <td class="fw-bold pt-4" >${element.price}$</td>
-   <td class="fw-bold pt-4">${element.stock}</td>
    <td class="fw-bold pt-4">${element.rating}</td>
    <td class="fw-bold pt-4">${element.category}</td>
+   <td class="fw-bold pt-4">${element.stock}</td>
    <td class="fw-bold pt-4"><button class="rounded-circle btn"><a href="updating.html?id=${element.id}"><img src="assest/img/edit.png" alt="" width="30px" height="30px"></a></button></td>
    <td class="fw-bold pt-4"><button class="rounded-circle btn" onclick = "del_Product(${element.id})"><img src="assest/img/trash.png" width="30px" height="30px" alt=""></button></td>
  </tr>
@@ -76,7 +76,7 @@ previous.addEventListener('click',(e)=>{
     e.preventDefault();
     skipTime--;
     if(skipTime==0){
-        getProduct(skipTime=1) 
+        getProduct(skipTime=0) 
     }else{
         getProduct(skipTime)
 
