@@ -2,6 +2,8 @@
 const products =document.getElementById('products');
 const next= document.getElementById('next');
 const previous= document.getElementById('previous');
+const seachPro = document.getElementById('seachPro');
+
 let Allproducts=[];
 const size =5;
 let skipTime=0;
@@ -122,3 +124,30 @@ const del_Product=async(id)=>{
       })
     
 }
+/////////////////////////////
+const debounce = (func, timeout = 500) => {
+  let timer;
+  return () => {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      func();
+    }, timeout);
+  };
+};
+
+
+
+const searchInput = async()=>{
+   
+    if(seachPro.value != ""){
+      console.log(seachPro.value)
+      const response = await fetch(`https://dummyjson.com/products/search?q=${seachPro.value}`);
+      const data =await response.json();
+      console.log(data);
+      displayProduct(data.products);
+    }
+  
+}
+
+const debounceSearch = debounce(searchInput, 800);
+seachPro.addEventListener("keyup", debounceSearch);
