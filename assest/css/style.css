@@ -7,16 +7,16 @@ a{
     text-decoration: none;
 }
 .list-group-item{
+    transition: .7s;
     border-bottom: 1px solid white !important;
 }
-.list-group-item a{
-    transition: .5s;
-    
-}
 
-.list-group-item a:hover{
+
+.list-group-item:hover{
     padding-left: 30px;
     color:rgb(175, 172, 172) !important;
     cursor: pointer;
-
+}
+.list-group-item:hover a{
+    color:rgb(175, 172, 172) !important; 
 }

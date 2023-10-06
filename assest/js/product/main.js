@@ -68,8 +68,11 @@ getProduct((skipTime = 0));
 
 next.addEventListener("click", (e) => {
   e.preventDefault();
-  ++skipTime;
-  console.log(skipTime);
+  if(skipTime < maxSkips){
+    ++skipTime;
+    console.log(skipTime);
+  }
+ 
   if (skipTime >= maxSkips) {
     next.setAttribute('disabled', '')
 
@@ -85,8 +88,12 @@ previous.setAttribute('disabled', '');
 previous.addEventListener("click", (e) => {
   e.preventDefault();
   console.log(skipTime);
-  --skipTime;
+  if(skipTime >= 0){
+    --skipTime;
+  }
+ 
   if (skipTime < 0) {
+    previous.setAttribute('disabled','')
    
     
   } else {
