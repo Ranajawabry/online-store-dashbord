@@ -20,48 +20,75 @@
         </div>
       </nav>
       
-      <header>
-        <div class="container">
-          <div class="d-flex justify-content-around">
-            <h1 class="text-capitalize my-5 py-2 ">dashbord</h1>
-            <a href="adding.html" class="my-5 pt-2 text-capitalize text-decoration-none text-white fw-bolder bg-dark rounded-1 px-3" ><span class="fs-4">+</span> add product</a>
+     
+      <div class="dash-bord ">
+        <div class="row">
+
+          <div class="col-3 bg-secondary p-4">
+            <div class="container">
+              <ul class="list-group pt-4">
+                <li class="list-group-item bg-transparent border-0 text-capitalize text-white fs-5"><a>products</a></li>
+                <li class="list-group-item bg-transparent border-0 text-capitalize text-white fs-5"><a class="text-white" href="user.html">users</a></li>
+                <li class="list-group-item bg-transparent border-0 text-capitalize text-white fs-5"><a class="text-white" href="carts.html">carts</a></li>
+                <li class="list-group-item bg-transparent border-0 text-capitalize text-white fs-5">A fourth item</li>
+                <li class="list-group-item bg-transparent border-0 text-capitalize text-white fs-5">And a fifth one</li>
+              </ul>
+
+            </div>
+
+          
+           
 
           </div>
-            
-            <hr>
+
+          <div class="col-9">
+            <header>
+              <div class="container">
+                <div class="d-flex justify-content-around">
+                  <h1 class="text-capitalize my-5 py-2 ">dashbord</h1>
+                  <a href="adding.html" class="my-5 pt-2 text-capitalize text-decoration-none text-white fw-bolder bg-dark rounded-1 px-3" ><span class="fs-4">+</span> add product</a>
+      
+                </div>
+                  
+                  <hr>
+      
+              </div>
+            </header>
+            <div class="container-fluid">
+              <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col" class="text-capitalize">#</th>
+                      <th scope="col" class="text-capitalize">name</th>
+                      <th scope="col" class="text-capitalize">img</th>
+                      <th scope="col" class="text-capitalize">price</th>
+                      <th scope="col" class="text-capitalize">rating</th>
+                      <th scope="col" class="text-capitalize">category</th>
+                      <th scope="col" class="text-capitalize">stock</th>
+                      <th scope="col" class="text-capitalize">edit</th>
+                      <th  scope="col" class="text-capitalize">delete</th>
+  
+                    </tr>
+                  </thead>
+                  <tbody id="products">
+              
+                  </tbody>
+                </table>
+                <nav aria-label="Page navigation example" class="d-flex justify-content-center">
+                  <ul class="pagination">
+                    <button class=" page-item btn" id="previous" ><a class="page-link" href="#">Previous</a></button>
+                    <button class="page-item btn" id="next"><a class="page-link" href="#">Next</a></button>
+                  </ul>
+                </nav>
+  
+          </div>
+          </div>
 
         </div>
-      </header>
-      <div class="dash-bord mt-5">
-        <div class="container">
-            <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col" class="text-capitalize">#</th>
-                    <th scope="col" class="text-capitalize">name</th>
-                    <th scope="col" class="text-capitalize">img</th>
-                    <th scope="col" class="text-capitalize">price</th>
-                    <th scope="col" class="text-capitalize">rating</th>
-                    <th scope="col" class="text-capitalize">category</th>
-                    <th scope="col" class="text-capitalize">stock</th>
-                    <th scope="col" class="text-capitalize">edit</th>
-                    <th  scope="col" class="text-capitalize">delete</th>
-
-                  </tr>
-                </thead>
-                <tbody id="products">
-            
-                </tbody>
-              </table>
-              <nav aria-label="Page navigation example" class="d-flex justify-content-center">
-                <ul class="pagination">
-                  <li class=" page-item" id="previous"><a class="page-link" href="#">Previous</a></li>
-                  <li class="page-item" id="next"><a class="page-link" href="#">Next</a></li>
-                </ul>
-              </nav>
-
-        </div>
+        
       </div>
+
+      
   
 
     

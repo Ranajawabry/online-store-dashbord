@@ -103,6 +103,7 @@ Swal.fire({
         body: JSON.stringify( {UpdatedProduct} )
     });
     console.log( await response.json());
+    window.location = 'index.html'
     clear();
     Swal.fire('Saved!', '', 'success')
   } else if (result.isDenied) {

@@ -3,6 +3,7 @@ const next = document.getElementById("next");
 const previous = document.getElementById("previous");
 const seachPro = document.getElementById("seachPro");
 
+
 let Allproducts = [];
 const size = 5;
 let skipTime = 0;
@@ -63,22 +64,34 @@ const displayProduct = (data, i = 0) => {
 
 getProduct((skipTime = 0));
 
+
+
 next.addEventListener("click", (e) => {
   e.preventDefault();
-  skipTime++;
-  // console.log(skipTime);
-  if (skipTime > maxSkips) {
-    getProduct(maxSkips);
+  ++skipTime;
+  console.log(skipTime);
+  if (skipTime >= maxSkips) {
+    next.setAttribute('disabled', '')
+
   } else {
+    next.removeAttribute('disabled');
+    previous.removeAttribute('disabled');
+
     getProduct(skipTime);
   }
 });
+console.log(skipTime)
+previous.setAttribute('disabled', '');
 previous.addEventListener("click", (e) => {
   e.preventDefault();
-  skipTime--;
-  if (skipTime == 0) {
-    getProduct((skipTime = 0));
+  console.log(skipTime);
+  --skipTime;
+  if (skipTime < 0) {
+   
+    
   } else {
+    previous.removeAttribute('disabled');
+    next.removeAttribute('disabled');
     getProduct(skipTime);
   }
 });
