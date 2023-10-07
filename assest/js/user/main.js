@@ -17,8 +17,9 @@ const getUsers = async(i=0)=>{
     const response= await fetch(`https://dummyjson.com/users?limit=${size}&skip=${i*size}`);
     const data = await response.json();
     users=data.users;
-    return data.users
     console.log(data.users);
+    return data.users
+    
 }
 
 const display = (AllUsers,i=0)=>{
@@ -35,7 +36,7 @@ const display = (AllUsers,i=0)=>{
    <td class="fw-bold pt-4">${user.gender}</td>
    <td class="fw-bold pt-4">${user.email}</td>
    <td class="fw-bold pt-4">${user.age}</td>
-   <td class="fw-bold pt-4"><button class="rounded-circle btn"><a href="updating.html?id=${user.id}"><img src="../assest/img/trolley.png" alt="" width="30px" height="30px"></a></button></td>
+   <td class="fw-bold pt-4"><button class="rounded-circle btn"><a href="userCart.html?id=${user.id}&name=${user.firstName}"><img src="../assest/img/trolley.png" alt="" width="30px" height="30px"></a></button></td>
    <td class="fw-bold pt-4"><button class="rounded-circle btn" onclick ="del_User(${user.id
    })"><img  src="../assest/img/trash.png" width="30px" height="30px" alt=""></button></td>
  </tr>
