@@ -42,3 +42,8 @@ const display=(data)=>{
     userData.innerHTML=result
 
 }
+
+const deleteToken =()=>{
+    console.log('llll')
+    localStorage.removeItem('token')
+}
