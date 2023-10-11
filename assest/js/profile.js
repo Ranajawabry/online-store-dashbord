@@ -5,7 +5,7 @@ const params = Object.fromEntries(urlSearchParams.entries());
 const id = params.id;
 
 
-const getUserDetails = async()=>{
+const getUserDetails = async () => {
     const response = await fetch('https://dummyjson.com/users/1');
     const data = await response.json();
     console.log(data)
@@ -14,11 +14,11 @@ const getUserDetails = async()=>{
 }
 getUserDetails()
 
-const display=(data)=>{
+const display = (data) => {
     const title = document.querySelector('.title');
-    title.innerHTML= `${data.firstName} Portfolio`;
+    title.innerHTML = `${data.firstName} Portfolio`;
     const userData = document.querySelector('.userData')
-    const result =`
+    const result = `
     <div class="row">
     <div class="img col-3">
         <img src=${data.image} class='w-100' alt="">
@@ -39,11 +39,11 @@ const display=(data)=>{
 </div>
     
     `
-    userData.innerHTML=result
+    userData.innerHTML = result
 
 }
 
-const deleteToken =()=>{
+const deleteToken = () => {
     console.log('llll')
     localStorage.removeItem('token')
 }
