@@ -39,10 +39,8 @@ console.log(data.token);
 const token = data.token;
 if(token){
   localStorage.setItem('token',token);
-  
+  window.location  = `profile.html?id=${data.id}`
 }
-
-
 
 }
 
