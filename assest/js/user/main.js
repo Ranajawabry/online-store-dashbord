@@ -44,7 +44,7 @@ const display = (AllUsers,i=0)=>{
         
     });
    
-    users.innerHTML=result
+    users.innerHTML=result;
 
 }
 const displayData= async(skipTime)=>{
