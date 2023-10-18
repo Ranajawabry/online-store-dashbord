@@ -41,7 +41,8 @@ console.log(decodeToken(data.token))
 const token = data.token;
 id=decodeToken(data.token).id
 if(token){
-  localStorage.setItem('token',token);
+  setCookie('token', token, 1) 
+  // localStorage.setItem('token',token);
   window.location  = `profile.html?id=${id}`
 }
 
@@ -55,7 +56,7 @@ form.addEventListener('submit',async (e)=>{
     
 })
 
-if(window.location.pathname === '/pages/signin.html' && localStorage.getItem('token')){
+if(window.location.pathname === '/pages/signin.html' && getCookie("token")){
   
   window.location  = `profile.html?id=${id}`
 }
@@ -69,4 +70,29 @@ const decodeToken=(token)=>{
     }).join(''));
 
     return JSON.parse(jsonPayload);
+}
+
+//////////set data in cookie////////
+function setCookie(cname, cvalue, exdays) {
+  const d = new Date();
+  d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+  let expires = "expires="+d.toUTCString();
+  console.log(d.toUTCString())
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+/////////////get data from cookie//////
+function getCookie(cname) {
+  let name = cname + "=";
+  let ca = document.cookie.split(';');
+  for(let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
 }

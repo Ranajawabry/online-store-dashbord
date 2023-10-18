@@ -46,6 +46,7 @@ const display = (data) => {
 const deleteToken = () => {
     console.log('llll')
     localStorage.removeItem('token')
+    document.cookie = "token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
 }
 
 if(window.location.pathname === '/pages/signin.html' && localStorage.getItem('token')){
