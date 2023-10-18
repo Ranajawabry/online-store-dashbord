@@ -47,3 +47,8 @@ const deleteToken = () => {
     console.log('llll')
     localStorage.removeItem('token')
 }
+
+if(window.location.pathname === '/pages/signin.html' && localStorage.getItem('token')){
+
+    window.location  = `profile.html?id=${id}`
+  }

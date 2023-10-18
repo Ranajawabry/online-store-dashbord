@@ -3,7 +3,8 @@ const password= document.getElementById('password');
 const form =document.getElementsByTagName('form')[0];
 // console.log(form)
 let userName;
-let userPassword
+let userPassword;
+let id;
 
 const getName= ()=>{
     // console.log(email.value);
@@ -36,15 +37,15 @@ const signIn= async()=>{
   })
 const data = await response.json();
 console.log(data.token);
+console.log(decodeToken(data.token))
 const token = data.token;
+id=decodeToken(data.token).id
 if(token){
   localStorage.setItem('token',token);
-  window.location  = `profile.html?id=${data.id}`
+  window.location  = `profile.html?id=${id}`
 }
 
 }
-
-
 
 
 form.addEventListener('submit',async (e)=>{
@@ -54,3 +55,18 @@ form.addEventListener('submit',async (e)=>{
     
 })
 
+if(window.location.pathname === '/pages/signin.html' && localStorage.getItem('token')){
+  
+  window.location  = `profile.html?id=${id}`
+}
+
+const decodeToken=(token)=>{
+
+    let base64Url = token.split('.')[1];
+    let base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+    let jsonPayload = decodeURIComponent(window.atob(base64).split('').map(function(c) {
+        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+    }).join(''));
+
+    return JSON.parse(jsonPayload);
+}
